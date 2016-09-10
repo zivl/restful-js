@@ -8,29 +8,32 @@ In case of customized logic, there are some hook methods you can override
 ```
 npm install restful-js --save
 ```
+
 ### How to use
 ***GET*** -
 Use the `fetch` or `get` methods with the following parameters:<br>
-`url` - type `String`.
+`url` - type `String`.<br>
 `options` - type `Object`. All of the `ajax` options you would like to provide.
 
 ***POST***
 Use the `fetch` or `get` methods with the following parameters:<br>
-`url` - type `String`.
+`url` - type `String`.<br>
 `data` - type `Any`. The data you would like to send to the server.
 `options` - type `Object`. All of the `ajax` options you would like to provide.
 
 ***PUT***
 Use the `fetch` or `get` methods with the following parameters:<br>
-`url` - type `String`.
+`url` - type `String`.<br>
 `data` - type `Any`. The data you would like to send to the server.
 `options` - type `Object`. All of the `ajax` options you would like to provide.
 
 ***DELETE***
 Use the `destroy` method with the following parameters:<br>
-`url` - type `String`.
+`url` - type `String`.<br>
 `options` - type `Object`. All of the `ajax` options you would like to provide.
+
 ### Different ways to use
+
 ##### As a Singelton
 By default, an instance of the restful-js object is exported and ready to use.<br>
 For example:<br>
@@ -53,6 +56,7 @@ restfulAPI.fetch(`${baseUrl}/users`).then(response => {
 			// handle response
 		});
 ```
+
 #### Inherit and add you own customization
 You can easily customize some behavioural stuff by inheriting from the exported `RestfulAPI` and add your own logic.
 <br>
