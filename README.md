@@ -16,13 +16,13 @@ Use the `fetch` or `get` methods with the following parameters `(url, options)` 
 `options` - type `Object`. All of the `ajax` options you would like to provide.
 
 ***POST***<br>
-Use the `fetch` or `get` methods with the following parameters `(url, data, options)` where:<br>
+Use the `post` methods with the following parameters `(url, data, options)` where:<br>
 `url` - type `String`.<br>
 `data` - type `Any`. The data you would like to send to the server.<br>
 `options` - type `Object`. All of the `ajax` options you would like to provide.
 
 ***PUT***<br>
-Use the `fetch` or `get` methods with the following parameters `(url, data, options)` where:<br>
+Use the `put` methods with the following parameters `(url, data, options)` where:<br>
 `url` - type `String`.<br>
 `data` - type `Any`. The data you would like to send to the server.<br>
 `options` - type `Object`. All of the `ajax` options you would like to provide.
@@ -40,24 +40,22 @@ For example:<br>
 ```
 import RestApi from 'restful-js';
 // later on...
-RestApi.fetch('some/url/resource').then(response => {
-    // handle response
-		});
+RestApi.fetch('some/url/resource').then(response => { /* handle response */ });
+
 ```
 
-#### As a Class
+##### As a Class
 You may also get a class and instantiate it yourself and manage it's life-cycle. <br>
 For example:<br>
 ```
 import {RestfulAPI} from 'restful-js';
 // later on...
 let restfulAPI = new RestfulAPI();
-restfulAPI.fetch(`${baseUrl}/users`).then(response => {
-			// handle response
-		});
+restfulAPI.fetch(`${baseUrl}/users`).then(response => { /* handle response */ });
+
 ```
 
-#### Inherit and add you own customization
+##### Inherit and add you own customization
 You can easily customize some behavioural stuff by inheriting from the exported `RestfulAPI` and add your own logic.
 <br>
 For example:<br>
