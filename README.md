@@ -10,25 +10,25 @@ npm install restful-js --save
 ```
 
 ### How to use
-***GET*** -
-Use the `fetch` or `get` methods with the following parameters:<br>
+***GET***<br>
+Use the `fetch` or `get` methods with the following parameters `(url, options)` where:<br>
 `url` - type `String`.<br>
 `options` - type `Object`. All of the `ajax` options you would like to provide.
 
-***POST***
-Use the `fetch` or `get` methods with the following parameters:<br>
+***POST***<br>
+Use the `fetch` or `get` methods with the following parameters `(url, data, options)` where:<br>
 `url` - type `String`.<br>
-`data` - type `Any`. The data you would like to send to the server.
+`data` - type `Any`. The data you would like to send to the server.<br>
 `options` - type `Object`. All of the `ajax` options you would like to provide.
 
-***PUT***
-Use the `fetch` or `get` methods with the following parameters:<br>
+***PUT***<br>
+Use the `fetch` or `get` methods with the following parameters `(url, data, options)` where:<br>
 `url` - type `String`.<br>
-`data` - type `Any`. The data you would like to send to the server.
+`data` - type `Any`. The data you would like to send to the server.<br>
 `options` - type `Object`. All of the `ajax` options you would like to provide.
 
-***DELETE***
-Use the `destroy` method with the following parameters:<br>
+***DELETE***<br>
+Use the `destroy` method with the following parameters `(url, options)` where:<br>
 `url` - type `String`.<br>
 `options` - type `Object`. All of the `ajax` options you would like to provide.
 
