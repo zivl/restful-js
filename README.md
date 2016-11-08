@@ -60,7 +60,7 @@ For example:<br>
 ```
 import {RestfulAPI} from 'restful-js';
 // later on...
-let restfulAPI = new RestAPIUtil({
+let restfulAPI = new RestfulAPI({
 	errorResponseHandler: (xhr, textStatus, errorThrown) => {...}
 	ajaxStartHandler: () => {...},
 	ajaxStopHandler: () => {...}
