@@ -100,4 +100,18 @@ describe('main plug-in test', () => {
 		restfulAPI.fetch(`${baseUrl}/non/exist/resource`);
 	});
 
+	it('should call ajax start event', done => {
+		const ajaxStartHandler = function(){
+			done();
+		};
+		new RestfulAPI({ajaxStartHandler}).get(`${baseUrl}/users`);
+	});
+
+	it('should call ajax stop event', done => {
+		const ajaxStopHandler = function(){
+			done();
+		};
+		new RestfulAPI({ajaxStopHandler}).get(`${baseUrl}/users`);
+	});
+
 });

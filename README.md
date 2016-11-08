@@ -10,27 +10,27 @@ npm install restful-js --save
 ```
 
 ### How to use
-***GET***<br>
-Use the `fetch` or `get` methods with the following parameters `(url, options)` where:<br>
-`url` - type `String`.<br>
-`options` - type `Object`. All of the `ajax` options you would like to provide.
+***`fetch(url, options)`*** or ***`get(url, options)`***<br>
+Sends ***HTTP GET*** request with the following parameters:<br>
+`url: String` - the URL resource.<br>
+`options: Object` - All of the `ajax` options you would like to provide.
 
-***POST***<br>
-Use the `post` methods with the following parameters `(url, data, options)` where:<br>
-`url` - type `String`.<br>
-`data` - type `Any`. The data you would like to send to the server.<br>
-`options` - type `Object`. All of the `ajax` options you would like to provide.
+***`post(url, data, options)`***<br>
+Sends ***HTTP POST*** request with the following parameters:<br>
+`url: String` - the URL resource.<br>
+`data: Any` - The data you would like to send to the server.<br>
+`options: Object` - All of the `ajax` options you would like to provide.
 
-***PUT***<br>
-Use the `put` methods with the following parameters `(url, data, options)` where:<br>
-`url` - type `String`.<br>
-`data` - type `Any`. The data you would like to send to the server.<br>
-`options` - type `Object`. All of the `ajax` options you would like to provide.
+***`put(url, data, options)`***<br>
+Sends ***HTTP PUT*** request with the following parameters:<br>
+`url: String` - the URL resource.<br>
+`data: Any` - The data you would like to send to the server.<br>
+`options: Object` - All of the `ajax` options you would like to provide.
 
-***DELETE***<br>
-Use the `destroy` method with the following parameters `(url, options)` where:<br>
-`url` - type `String`.<br>
-`options` - type `Object`. All of the `ajax` options you would like to provide.
+***`destroy(url, options)`***<br>
+Sends ***HTTP DELETE*** request with the following parameters:<br>
+`url: String` - the URL resource.<br>
+`options: Object` - All of the `ajax` options you would like to provide.
 
 ### Different ways to use
 
@@ -52,7 +52,19 @@ import {RestfulAPI} from 'restful-js';
 // later on...
 let restfulAPI = new RestfulAPI();
 restfulAPI.fetch(`${baseUrl}/users`).then(response => { /* handle response */ });
+```
 
+##### Add event handlers
+You may instantiate a class and give different handlers for XHR events. <br>
+For example:<br>
+```
+import {RestfulAPI} from 'restful-js';
+// later on...
+let restfulAPI = new RestAPIUtil({
+	errorResponseHandler: (xhr, textStatus, errorThrown) => {...}
+	ajaxStartHandler: () => {...},
+	ajaxStopHandler: () => {...}
+});
 ```
 
 ##### Inherit and add you own customization

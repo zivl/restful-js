@@ -17,6 +17,10 @@ export class RestfulAPI {
 	constructor(options) {
 		if (options) {
 			this.errorResponseHandler = options.errorResponseHandler;
+			if(options.ajaxStartHandler || options.ajaxStopHandler) {
+				$(document).ajaxStart(options.ajaxStartHandler);
+				$(document).ajaxStop(options.ajaxStopHandler);
+			}
 		}
 	}
 
