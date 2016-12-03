@@ -22,6 +22,8 @@ export class RestfulAPI {
 				$(document).ajaxStop(options.ajaxStopHandler);
 			}
 		}
+
+		this.$ = $;
 	}
 
 	applySecurity(options, data) {

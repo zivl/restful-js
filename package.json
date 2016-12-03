@@ -1,6 +1,6 @@
 {
   "name": "restful-js",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Simple and generic JavaScript class to handle REST API calls",
   "author": "Ziv Levy (https://github.com/zivl)",
   "main": "dist/index.js",

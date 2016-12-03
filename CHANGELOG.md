@@ -1,3 +1,6 @@
+## 0.7.0
+* exposing `jQuery` (`$`) reference to the outside
+ 
 ## 0.6.1
 
 * Fix: Documentation fix

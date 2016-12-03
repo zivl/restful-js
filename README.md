@@ -81,6 +81,20 @@ class MyRestfulAPI extends RestfulAPI {
 }
 ```
 
+##### Get a jQuery reference
+You may get a `jQuery` reference for your own usage and event handling
+<br>
+For example:<br>
+```
+import {RestfulAPI} from 'restful-js';
+
+const restfulAPI = new RestAPIUtil();
+
+// jQuery binary transport to download files through XHR
+restfulAPI.$.ajaxTransport('+binary', () => {...})
+
+```
+
 ### Having some trouble? Have an issue?
 For bugs and issues, please use the [issues](https://github.com/zivl/restful-js/issues) page.
 

@@ -114,4 +114,8 @@ describe('main plug-in test', () => {
 		new RestfulAPI({ajaxStopHandler}).get(`${baseUrl}/users`);
 	});
 
+	it('should expose jQuery to the out side', () => {
+		expect(RestApi.$).toExist();
+	});
+
 });
