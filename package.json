@@ -51,6 +51,7 @@
     "karma-chrome-launcher": "^1.0.1",
     "karma-cli": "^1.0.0",
     "karma-coverage": "^1.0.0",
+    "karma-firefox-launcher": "^1.0.0",
     "karma-mocha": "^1.0.1",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
