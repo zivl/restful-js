@@ -10,6 +10,8 @@ module.exports = function (config) {
 
 		autoWatchBatchDelay: 50,
 
+		browserNoActivityTimeout: 30000,
+
 		frameworks: ['mocha'],
 
 		files: [

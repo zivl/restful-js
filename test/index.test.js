@@ -4,8 +4,9 @@ import RestApi, {RestfulAPI} from '../index.js';
 const baseUrl = 'http://jsonplaceholder.typicode.com';
 const NOT_FOUND_ERROR = 404;
 
-describe('main plug-in test', () => {
+describe('main plug-in test', function () {
 
+	this.timeout(15000);
 
 	it('should be initialized by default', () => {
 		expect(RestfulAPI).toExist();
