@@ -1,4 +1,7 @@
 # Restful JS
+[![Build Status](https://travis-ci.org/zivl/restful-js.svg?branch=master)](https://travis-ci.org/zivl/restful-js)
+[![npm version](https://badge.fury.io/js/restful-js.svg)](https://badge.fury.io/js/restful-js)
+
 A simple and generic way to handle RESTful API calls in your JavaScript application.<br>
 There are many libraries and utilities classes which provide RESTful implementation in JavaScript to handle API calls to server. Unfortunately, those other solutions, as good as they are, not always suits for everyone. Sometimes, the willing to do everything, just makes it more complex and harder to use. <br>
 This `restful-js` solution, keeps stuff the most simple there is, and exposes a nice and easy interface for use in your app.
