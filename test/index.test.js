@@ -53,15 +53,18 @@ describe('main plug-in test', () => {
 
 	it('should post data to server with FormData object', done => {
 		let formData = new FormData();
-		formData.set('upload', JSON.stringify({
-			data: {
-				title: 'restful-js'
-			}
-		}));
-		RestApi.post(`${baseUrl}/posts`, formData).then(response => {
-			expect(response).toExist().toIncludeKey('id');
-			done();
-		});
+		if (formData.set) { // to support FF < 39.0
+			formData.set('upload', JSON.stringify({
+				data: {
+					title: 'restful-js'
+				}
+			}));
+			RestApi.post(`${baseUrl}/posts`, formData).then(response => {
+				expect(response).toExist().toIncludeKey('id');
+				done();
+			});
+		}
+		else {done();}
 	});
 
 	it('should update data on server', done => {
@@ -101,14 +104,14 @@ describe('main plug-in test', () => {
 	});
 
 	it('should call ajax start event', done => {
-		const ajaxStartHandler = function(){
+		const ajaxStartHandler = function () {
 			done();
 		};
 		new RestfulAPI({ajaxStartHandler}).get(`${baseUrl}/users`);
 	});
 
 	it('should call ajax stop event', done => {
-		const ajaxStopHandler = function(){
+		const ajaxStopHandler = function () {
 			done();
 		};
 		new RestfulAPI({ajaxStopHandler}).get(`${baseUrl}/users`);
