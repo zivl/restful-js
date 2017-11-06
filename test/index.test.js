@@ -6,7 +6,7 @@ const NOT_FOUND_ERROR = 404;
 
 describe('main plug-in test', function () {
 
-	this.timeout(15000);
+	this.timeout(5000);
 
 	it('should be initialized by default', () => {
 		expect(RestfulAPI).toExist();
