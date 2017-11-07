@@ -5,7 +5,7 @@
   "author": "Ziv Levy (https://github.com/zivl)",
   "main": "dist/index.js",
   "scripts": {
-    "test": "karma start --log-level debug",
+    "test": "karma start",
     "prepublish": "npm run-script build",
     "build": "babel index.js --out-dir dist"
   },
