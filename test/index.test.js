@@ -1,12 +1,12 @@
 import expect from 'expect';
 import RestApi, {RestfulAPI} from '../index.js';
 
-const baseUrl = 'http://jsonplaceholder.typicode.com';
+const baseUrl = 'https://jsonplaceholder.typicode.com';
 const NOT_FOUND_ERROR = 404;
 
 describe('main plug-in test', function () {
 
-	this.timeout(15000);
+	this.timeout(10000);
 
 	it('should be initialized by default', () => {
 		expect(RestfulAPI).toExist();
@@ -27,7 +27,7 @@ describe('main plug-in test', function () {
 		expect(RestApi).toExist();
 	});
 
-	it('should get response from server', done => {
+	it.only('should get response from server', done => {
 		RestApi.fetch(`${baseUrl}/users`).then(response => {
 			expect(response.length).toExist().toBeMoreThan(0);
 			done();

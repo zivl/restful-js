@@ -4,7 +4,7 @@ var isparta = require('isparta');
 module.exports = function (config) {
 	config.set({
 
-		browsers: ['Firefox'],
+		browsers: ['Chrome'],
 
 		singleRun: true,
 
